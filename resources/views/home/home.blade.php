@@ -35,7 +35,9 @@
     <tr>
     <th scope="col">{{$loop->iteration}}</th>
       <th scope="col">{{$student->name}}</th>
-      <th scope="col">{{$student->image}}</th>
+      <th scope="col">
+        <img src="{{asset('storage/'.$student->image)}}" height="60px" width="60px" alt="">
+      </th>
       <th scope="col">{{$student->role}}</th>
       <th scope="col">{{$student->reg}}</th>
       <th scope="col">{{$student->address}}</th>

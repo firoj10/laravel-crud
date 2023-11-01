@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('role')->unique();
             $table->integer('reg')->unique();
             $table->string('email')->unique();
-            $table->integer('number')->unique();
+            $table->string('number')->unique();
             $table->longText('address');
             $table->timestamps();
         });

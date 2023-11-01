@@ -18,7 +18,7 @@
 
 </div>
 </div>
-<form action="{{route('student.update', $student->id)}}" method="POST">
+<form action="{{route('student.update', $student->id)}}" method="POST" enctype="multipart/form-data">
 @csrf
   <div class="form-row row">
     <div class="form-group col-md-6">
@@ -27,17 +27,17 @@
     </div>
     <div class="form-group col-md-6">
     <label for="formFile" class="form-label">Image</label>
-  <input class="form-control" value="{{$student->image}}" name="image" type="file" id="formFile">
+  <input class="form-control" name="image" type="file" id="formFile">
     </div>
     </div>
   <div class="form-row row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Roll</label>
-      <input type="text" value="{{$student->role}}" name="role" class="form-control" id="inputEmail4" placeholder=" enter your roll">
+      <input type="number" value="{{$student->role}}" name="role" class="form-control" id="inputEmail4" placeholder=" enter your roll">
     </div>
     <div class="form-group col-md-6">
       <label for="inputEmail4">Reg</label>
-      <input type="text" value="{{$student->reg}}" name="reg" class="form-control" id="inputEmail4" placeholder=" enter your reg">
+      <input type="number" value="{{$student->reg}}" name="reg" class="form-control" id="inputEmail4" placeholder=" enter your reg">
     </div>
     </div>
   <div class="form-row row">
@@ -47,7 +47,7 @@
     </div>
     <div class="form-group col-md-6">
       <label for="inputEmail4">Number</label>
-      <input type="text" value="{{$student->number}}" name="number" class="form-control" id="inputEmail4" placeholder=" enter your number">
+      <input type="number" value="{{$student->number}}" name="number" class="form-control" id="inputEmail4" placeholder=" enter your number">
     </div>
     
     </div>

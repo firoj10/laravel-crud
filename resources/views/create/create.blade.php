@@ -18,43 +18,43 @@
 
 </div>
 </div>
-<form action="{{route('student.store')}}" method="POST">
+<form action="{{route('student.store')}}" method="POST" enctype="multipart/form-data">
 @csrf
   <div class="form-row row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Name</label>
-      <input type="text" name="name" class="form-control" id="inputEmail4" placeholder=" enter your name">
+      <input type="text" name="name" class="form-control" id="inputEmail4" value="{{old('name')}}"  placeholder=" enter your name">
     </div>
     <div class="form-group col-md-6">
     <label for="formFile" class="form-label">Image</label>
-  <input class="form-control" name="image" type="file" id="formFile">
+  <input class="form-control" name="image" type="file"   accept="image/*">
     </div>
     </div>
   <div class="form-row row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Roll</label>
-      <input type="text" name="role" class="form-control" id="inputEmail4" placeholder=" enter your roll">
+      <input type="number" name='role' class="form-control" value="{{old('role')}}"   placeholder=" enter your roll">
     </div>
     <div class="form-group col-md-6">
       <label for="inputEmail4">Reg</label>
-      <input type="text" name="reg" class="form-control" id="inputEmail4" placeholder=" enter your reg">
+      <input type="number" name="reg" class="form-control" id="inputEmail4" value="{{old('reg')}}"  placeholder="enter your reg">
     </div>
     </div>
   <div class="form-row row">
   <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input type="email" name="email" class="form-control" id="inputEmail4" placeholder=" enter your email">
+      <input type="email" name="email" class="form-control" id="inputEmail4" value="{{old('email')}}"  placeholder=" enter your email">
     </div>
     <div class="form-group col-md-6">
       <label for="inputEmail4">Number</label>
-      <input type="text" name="number" class="form-control" id="inputEmail4" placeholder=" enter your number">
+      <input type="number" name="number" class="form-control" id="inputEmail4" value="{{old('number')}}"  placeholder=" enter your number">
     </div>
     
     </div>
  
   <div class="form-group">
     <label for="inputAddress">Address</label>
-    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" name="address" class="form-control" id="inputAddress" value="{{old('address')}}"  placeholder="1234 Main St">
   </div>
  
   <button type="submit" class="btn btn-primary my-2">Submit</button>
